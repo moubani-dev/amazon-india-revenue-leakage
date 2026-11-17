@@ -192,6 +192,13 @@ class DataLoader:
                 summary["total_nulls"],
                 summary["duplicate_rows"]
             )
+            
+            logger.info(
+                "%s | Data Types: %s",
+                name,
+                df.dtypes.astype(str).to_dict()
+            )
+            
 
         return pd.DataFrame(summaries)
 
